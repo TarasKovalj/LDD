@@ -1,0 +1,12 @@
+# Если KERNELRELEASE определён, значит вызов сделан из
+# системы сборки ядра и можно использовать её язык.
+ifneq ($(KERNELRELEASE),)
+	obj-m := driver.o
+# Иначе вызов сделан прямо из командной
+# строки; вызвать систему сборки ядра.
+else
+   KERNELDIR ?= /home/user/projects/core_src/linux
+   PWD := $(shell pwd)
+default:
+	$(MAKE) -C
+endif

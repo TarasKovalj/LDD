@@ -1,0 +1,1 @@
+cmd_/home/user/projects/LD/drv.ko := ld -r -m elf_x86_64 -z max-page-size=0x200000 -T ./scripts/module-common.lds --build-id  -o /home/user/projects/LD/drv.ko /home/user/projects/LD/drv.o /home/user/projects/LD/drv.mod.o ;  true
